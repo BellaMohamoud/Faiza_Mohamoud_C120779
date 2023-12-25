@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "755929587182",
+    "project_id": "myauth-8c954",
+    "storage_bucket": "myauth-8c954.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755929587182:android:12907dcbc7c15339e2c2ff",
+        "android_client_info": {
+          "package_name": "com.example.mylogin_191"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfXOYXwv39w61f1qk--bjU9wLTdWcUG2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
