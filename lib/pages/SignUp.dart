@@ -5,11 +5,12 @@ import 'package:flutter/src/widgets/framework.dart';
 import '../utility/TextfieldWidget.dart';
 import '../utility/buttonWidget.dart';
 import '../utility/imagewidget.dart';
-import '../utility/mytext.dart';
+import '../utility/mytext.fielddart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
-
+  final TextEditingController _emailController=TextEditingController();
+  final TextEditingController _passwordController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +38,7 @@ class SignUp extends StatelessWidget {
                     height: 30,
                   ),
                   MyTextField(
+                     controller: _emailController,
                     HintText: 'Email ID',
                     PrefixIcon: Icon(
                       Icons.alternate_email_outlined,
@@ -46,6 +48,7 @@ class SignUp extends StatelessWidget {
                     height: 30,
                   ),
                   MyTextField(
+                    controller: _passwordController,
                     HintText: 'Password',
                     PrefixIcon: Icon(
                       Icons.lock_outline_rounded,

@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:mylogin_191/utility/imagewidget.dart';
 
 import '../utility/buttonWidget.dart';
-import '../utility/mytext.dart';
+import '../utility/mytext.fielddart';
 import 'SignUp.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
+  LoginPage({super.key});
+  final TextEditingController _emailController=TextEditingController();
+  final TextEditingController _passwordController=TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,13 +35,16 @@ class LoginPage extends StatelessWidget {
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     // login lable
-                    const MyText(MylableText: 'Login', FontSize: 40),
+                    const MyText(
+
+                      MylableText: 'Login', FontSize: 40),
                     SizedBox(
                       height: 30,
                     ),
 
                     // input username/password
                     TextField(
+                      controller: _emailController,
                       decoration: InputDecoration(
                           hintText: 'Email ID',
                           prefixIcon: Icon(Icons.alternate_email_outlined)),
@@ -48,6 +53,7 @@ class LoginPage extends StatelessWidget {
                       height: 30,
                     ),
                     const TextField(
+                       controller: _passwordController,
                       decoration: InputDecoration(
                         hintText: 'Password',
                         prefixIcon: Icon(Icons.lock),
@@ -86,7 +92,7 @@ class LoginPage extends StatelessWidget {
                                 MaterialPageRoute(
                                   builder: ((context) => SignUp()),
                                 ));
-                          },
+                          
                           child: Text('Registor',
                               style: TextStyle(
                                 fontSize: 20,
